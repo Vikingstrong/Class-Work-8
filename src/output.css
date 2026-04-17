@@ -12,6 +12,7 @@
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
+    --font-weight-bold: 700;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -198,8 +199,17 @@
   .items-center {
     align-items: center;
   }
+  .items-start {
+    align-items: flex-start;
+  }
   .justify-between {
     justify-content: space-between;
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
@@ -221,6 +231,18 @@
   }
   .gap-15 {
     gap: calc(var(--spacing) * 15);
+  }
+  .gap-20 {
+    gap: calc(var(--spacing) * 20);
+  }
+  .gap-25 {
+    gap: calc(var(--spacing) * 25);
+  }
+  .gap-50 {
+    gap: calc(var(--spacing) * 50);
+  }
+  .gap-52 {
+    gap: calc(var(--spacing) * 52);
   }
   .gap-100 {
     gap: calc(var(--spacing) * 100);
@@ -259,6 +281,12 @@
   .bg-\[white\] {
     background-color: white;
   }
+  .p-1 {
+    padding: calc(var(--spacing) * 1);
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
@@ -277,8 +305,17 @@
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
+  }
+  .py-20 {
+    padding-block: calc(var(--spacing) * 20);
   }
   .py-\[10px\] {
     padding-block: 10px;
@@ -303,6 +340,12 @@
   .text-\[22px\] {
     font-size: 22px;
   }
+  .text-\[23px\] {
+    font-size: 23px;
+  }
+  .text-\[24px\] {
+    font-size: 24px;
+  }
   .text-\[28px\] {
     font-size: 28px;
   }
@@ -312,8 +355,15 @@
   .text-\[32px\] {
     font-size: 32px;
   }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
   .text-\[\#151515\] {
     color: #151515;
+  }
+  .text-\[2-px\] {
+    color: 2-px;
   }
   .text-\[white\] {
     color: white;
@@ -333,6 +383,72 @@
   .placeholder\:text-\[white\] {
     &::placeholder {
       color: white;
+    }
+  }
+  .before\:bg-\[black\] {
+    &::before {
+      content: var(--tw-content);
+      background-color: black;
+    }
+  }
+  .before\:content-\[\"\"\] {
+    &::before {
+      --tw-content: "";
+      content: var(--tw-content);
+    }
+  }
+  .before\:content-\[\'\'\] {
+    &::before {
+      --tw-content: '';
+      content: var(--tw-content);
+    }
+  }
+  .before\:content-\[\'\*\'\] {
+    &::before {
+      --tw-content: '*';
+      content: var(--tw-content);
+    }
+  }
+  .before\:content-\[\'1\'\] {
+    &::before {
+      --tw-content: '1';
+      content: var(--tw-content);
+    }
+  }
+  .before\:content-\[\'a\'\] {
+    &::before {
+      --tw-content: 'a';
+      content: var(--tw-content);
+    }
+  }
+  .before\:content-\[\'a2\'\] {
+    &::before {
+      --tw-content: 'a2';
+      content: var(--tw-content);
+    }
+  }
+  .before\:content-\[\'h\'\] {
+    &::before {
+      --tw-content: 'h';
+      content: var(--tw-content);
+    }
+  }
+  .before\:content-\[\'he\'\] {
+    &::before {
+      --tw-content: 'he';
+      content: var(--tw-content);
+    }
+  }
+  .before\:content-\[\'hel\'\] {
+    &::before {
+      --tw-content: 'hel';
+      content: var(--tw-content);
+    }
+  }
+  .before\:content-\[\'hell\'\] {
+    &::before {
+      --tw-content: 'hell';
+      content: var(--tw-content);
     }
   }
   .lg\:m-auto {
@@ -388,6 +504,11 @@
   .lg\:w-100 {
     @media (width >= 64rem) {
       width: calc(var(--spacing) * 100);
+    }
+  }
+  .lg\:w-150 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 150);
     }
   }
   .lg\:w-200 {
@@ -450,6 +571,41 @@
       flex-direction: row;
     }
   }
+  .lg\:flex-row-reverse {
+    @media (width >= 64rem) {
+      flex-direction: row-reverse;
+    }
+  }
+  .lg\:gap-3 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 3);
+    }
+  }
+  .lg\:gap-5 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 5);
+    }
+  }
+  .lg\:gap-20 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 20);
+    }
+  }
+  .lg\:gap-40 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 40);
+    }
+  }
+  .lg\:gap-50 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 50);
+    }
+  }
+  .lg\:gap-100 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 100);
+    }
+  }
   .lg\:p-1 {
     @media (width >= 64rem) {
       padding: calc(var(--spacing) * 1);
@@ -485,6 +641,16 @@
       text-align: start;
     }
   }
+  .lg\:text-\[18px\] {
+    @media (width >= 64rem) {
+      font-size: 18px;
+    }
+  }
+  .lg\:text-\[50px\] {
+    @media (width >= 64rem) {
+      font-size: 50px;
+    }
+  }
   .lg\:text-\[60px\] {
     @media (width >= 64rem) {
       font-size: 60px;
@@ -496,16 +662,27 @@
   inherits: false;
   initial-value: solid;
 }
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-outline-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
 }
+@property --tw-content {
+  syntax: "*";
+  initial-value: "";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
+      --tw-font-weight: initial;
       --tw-outline-style: solid;
+      --tw-content: "";
     }
   }
 }
